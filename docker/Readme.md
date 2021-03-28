@@ -32,7 +32,7 @@ To start apache-airflow=2.10, run following command:
 $ cd bitnami-2.0
 $ docker-compose up
 ```
-To check the deployed apache-airflow=1.10 containerized workloads, run:
+To check the deployed apache-airflow=2.0 containerized workloads, run:
 ```
 $ docker ps
 CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS              PORTS                    NAMES
