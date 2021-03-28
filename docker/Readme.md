@@ -13,7 +13,7 @@ CONTAINER ID        IMAGE                         COMMAND                  CREAT
 21e0b73b4fff        bitnami/airflow:1-debian-10   "/app-entrypoint.sh …"   1 minute ago      Up 1 minute       0.0.0.0:8080->8080/tcp   bitnami-110_airflow_1
 e1e7f3d7b962        bitnami/redis:6.0             "/opt/bitnami/script…"   1 minute ago      Up 1 minute       6379/tcp                 bitnami-110_redis_1
 fff911bafea1        bitnami/postgresql:10         "/opt/bitnami/script…"   1 minute ago      Up 1 minute       5432/tcp                 bitnami-110_postgresql_1
-c11b74e5f490        bitnami/airflow-scheduler:1   "/app-entrypoint.sh …"   1 minute ago      Up 1 minutes                                bitnami-110_airflow-scheduler_1
+c11b74e5f490        bitnami/airflow-scheduler:1   "/app-entrypoint.sh …"   1 minute ago      Up 1 minute                                bitnami-110_airflow-scheduler_1
 ```
 
 Now, access the apache-airflow `web-ui` at `http://localhost:8080`.
