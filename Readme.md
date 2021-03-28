@@ -35,11 +35,12 @@ $ export POSTGRESQL_PASSWORD=$(kubectl get secret --namespace default airflow-po
 $ export REDIS_PASSWORD=$(kubectl get secret --namespace default airflow-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
 $ export POSTGRESQL_PVC=$(kubectl get pvc -l app.kubernetes.io/instance=airflow,app.kubernetes.io/name=postgresql -o jsonpath="{.items[0].metadata.name}")
 
-## export using scrit(alternative):
+## export using script(alternative):
 $ chmod +x export-secrets.sh
 $ ./export-secrets.sh
 ```
 
+Now, install airflow with necessary flags, secrets and depenent values:
 ```
 $ helm install airflow bitnami/airflow \
     --set loadExamples=true \
@@ -72,7 +73,7 @@ To uninstall/delete the airflow deployment:
 $ helm ls --n default
 $ helm delete -n default airflow
 
-## If failed to complelete delete all the workloads:
+## If failed to compleletely delete all the workloads:
 $ kubectl delete pods --all 
 $ kubectl delete svc --all
 $ kubectl delete deploy --all
