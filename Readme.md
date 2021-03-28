@@ -45,5 +45,12 @@ $ export AIRFLOW_PASSWORD=$(kubectl get secret --namespace "default" myrelease-a
 $ echo $AIRFLOW_PASSWORD
 ```
 
+### Clean Up
+To uninstall/delete the airflow deployment:
+```
+$ helm ls --namespace default
+$ helm delete -n default myrelease
+```
+
 
 
