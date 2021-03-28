@@ -63,7 +63,7 @@ $ kubectl port-forward --namespace default deploy/airflow-web 8080:8080
 ```
 For username use `user` and for passowrd, run following commands:
 ```
-$ export AIRFLOW_PASSWORD=$(kubectl get secret --namespace "default" myrelease-airflow -o jsonpath="{.data.airflow-password}" | base64 --decode)
+$ export AIRFLOW_PASSWORD=$(kubectl get secret --namespace default airflow -o jsonpath="{.data.airflow-password}" | base64 --decode)
 $ echo $AIRFLOW_PASSWORD
 ```
 
