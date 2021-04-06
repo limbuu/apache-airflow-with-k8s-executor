@@ -40,7 +40,7 @@ $ chmod +x export-secrets.sh
 $ ./export-secrets.sh
 ```
 
-Now, install airflow with necessary flags, secrets and depenent values:
+Now, install airflow with necessary flags, secrets and dependent values:
 ```
 $ helm install airflow bitnami/airflow \
     --set loadExamples=true \
@@ -61,7 +61,7 @@ $ kubectl port-forward --namespace default svc/airflow 8080:8080
 ## If there is port-forwarding issue, use this command instead:
 $ kubectl port-forward --namespace default deploy/airflow-web 8080:8080
 ```
-For username use `user` and for passowrd, run following commands:
+For username use `user` and for passoword, run following commands:
 ```
 $ export AIRFLOW_PASSWORD=$(kubectl get secret --namespace default airflow -o jsonpath="{.data.airflow-password}" | base64 --decode)
 $ echo $AIRFLOW_PASSWORD
